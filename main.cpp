@@ -1,21 +1,18 @@
 #include <iostream>
 
-void f2(){
-    std::cout << "Hello, my name is f2" << std::endl;
-}
-
-void f3(){
-    f2();
-    std::cout << "Hello, my name is f3" << std::endl;
-}
-
-void f1(){
-    f2();
-    f3();
-    std::cout << "Hello, my name is f1" << std::endl;
+int f1(int k){
+    int i = 1;
+    int f = 1;
+    while (i<=k) {
+        f *= i;
+        i++;
+    };
+    return f;
 }
 
 int main() {
-    f1();
+    int k = 12;
+    f1(k);
+    std::cout << f1(k) << std::endl;
     return 0;
 }
